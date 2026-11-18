@@ -1,0 +1,27 @@
+# CivicyLink (Plugin für den Minecraft-Server) bauen – die fertige CivicyLink.jar liegt danach unter
+# Actions → „Plugin bauen“ → letzter Lauf → Artifacts. In den plugins-Ordner des Paper-Servers legen.
+name: Plugin bauen
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['plugin/**', '.github/workflows/plugin.yml']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - name: Bauen
+        working-directory: plugin
+        run: mvn -B -q package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: CivicyLink
+          path: plugin/target/CivicyLink.jar

@@ -1,0 +1,19 @@
+name: CivicyLink
+version: '${project.version}'
+main: de.civicy.link.CivicyLink
+api-version: '1.21'
+description: Verbindet den Server mit der Civicy-Webseite (/weblogin, Ränge)
+commands:
+  weblogin:
+    description: Code für die Anmeldung auf der Webseite
+    usage: /weblogin
+    permission: civicy.weblogin
+  civicylink:
+    description: CivicyLink neu laden oder Rang neu abgleichen
+    usage: /civicylink <reload|sync [Spieler]>
+    permission: civicy.admin
+permissions:
+  civicy.weblogin:
+    default: true
+  civicy.admin:
+    default: op

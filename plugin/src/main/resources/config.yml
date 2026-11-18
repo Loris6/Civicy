@@ -1,0 +1,35 @@
+# CivicyLink – Verbindung zur Civicy-Webseite
+#
+# api:        Adresse des Backends (dieselbe wie in assets/js/config.js → api)
+# server-key: der Wert von SERVER_KEY aus den Geheimnissen des Backends (NICHT öffentlich machen)
+# website:    wird beim Code im Chat angezeigt
+api: "https://civicy-backend.NAME.workers.dev"
+server-key: ""
+website: "loris6.github.io/Civicy"
+
+# Rang-Abgleich: Beim Betreten (und mit /civicylink sync) wird der höchste Rang gesucht, dessen Permission
+# der Spieler hat, und an die Webseite geschickt. Reihenfolge = Rangfolge (oben = höchster).
+# Die Permissions vergibst du z. B. mit LuckPerms an die Gruppen: /lp group diamant permission set civicy.rank.diamant
+# Die Rang-ids müssen zu assets/js/data.js (ranks) passen.
+rank-sync:
+  enabled: true
+  default: spieler
+  ranks:
+    inhaber: civicy.rank.inhaber
+    admin: civicy.rank.admin
+    developer: civicy.rank.developer
+    moderator: civicy.rank.moderator
+    supporter: civicy.rank.supporter
+    builder: civicy.rank.builder
+    creator: civicy.rank.creator
+    netherite: civicy.rank.netherite
+    smaragd: civicy.rank.smaragd
+    diamant: civicy.rank.diamant
+    gold: civicy.rank.gold
+    eisen: civicy.rank.eisen
+
+messages:
+  code: "&bCivicy &8» &7Dein Code für die Webseite: &b&l%code% &7(gültig für 5 Minuten)\n&bCivicy &8» &7Gib ihn auf &b%website% &7unter „Anmelden“ → „Mit Code aus dem Spiel“ ein."
+  wait: "&bCivicy &8» &7Einen Moment …"
+  error: "&bCivicy &8» &cDie Webseite ist gerade nicht erreichbar. Versuch es gleich noch einmal."
+  not-configured: "&bCivicy &8» &cCivicyLink ist noch nicht eingerichtet (api und server-key in der config.yml)."

@@ -1,8 +1,8 @@
 /* Civicy – Offline-Speicher: Seite und Dateien aus dem Speicher, dann im Hintergrund aktualisieren */
-const CACHE = 'civicy-v1';
+const CACHE = 'civicy-v2';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest',
-  'assets/css/style.css', 'assets/js/config.js', 'assets/js/data.js', 'assets/js/icons.js', 'assets/js/auth.js', 'assets/js/app.js',
+  'assets/css/style.css', 'assets/js/config.js', 'assets/js/data.js', 'assets/js/icons.js', 'assets/js/auth.js', 'assets/js/api.js', 'assets/js/app.js',
   'assets/img/logo-sm.webp', 'assets/img/mondturm.jpg',
   'assets/fonts/rubik-latin-wght-normal.woff2', 'assets/fonts/silkscreen-latin-400-normal.woff2',
 ];

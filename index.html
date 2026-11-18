@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Civicy – Minecraft Server</title>
-  <meta name="description" content="Civicy ist ein deutscher Minecraft-Server für Java und Bedrock: Gründe Städte, gib ihnen eigene Gesetze, handle mit anderen Spielern und erlebe jede Woche Events.">
+  <title>Civicy – Minecraft-Netzwerk</title>
+  <meta name="description" content="Civicy ist ein deutsches Minecraft-Netzwerk für Java und Bedrock: BedWars, SkyWars, EggWars, LuckyWars, Epic Minigames, Murder Mystery, CityBuild und mehr.">
   <meta name="theme-color" content="#060B16">
-  <meta property="og:title" content="Civicy – Minecraft Server">
-  <meta property="og:description" content="Bau deine Stadt. Schreib Geschichte. Der Städte-Server für Java und Bedrock.">
+  <meta property="og:title" content="Civicy – Minecraft-Netzwerk">
+  <meta property="og:description" content="Ein Server. Unzählige Runden. BedWars, SkyWars, EggWars und mehr – für Java und Bedrock.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/icons/og-image.jpg">
   <meta name="application-name" content="Civicy">
@@ -66,19 +66,21 @@
       </div>
       <div class="foot__grid">
         <div class="foot__brand">
-          <p>Der Minecraft-Server, auf dem Spieler Städte gründen, Gesetze machen und gemeinsam Geschichte schreiben.</p>
+          <p>Das deutsche Minecraft-Netzwerk mit BedWars, SkyWars, EggWars, LuckyWars, Murder Mystery, CityBuild und mehr.</p>
           <div class="foot__ip" data-foot-ip></div>
         </div>
         <div class="foot__col">
           <h3>Spielen</h3>
-          <a href="#/regeln">Regeln</a>
+          <a href="#/modi">Spielmodi</a>
           <a href="#/raenge">Ränge</a>
+          <a href="#/regeln">Regeln</a>
           <a href="#/faq">Häufige Fragen</a>
           <a href="#/konto">Mein Konto</a>
         </div>
         <div class="foot__col">
           <h3>Community</h3>
           <a href="#/news">Neuigkeiten</a>
+          <a href="#/forum">Forum</a>
           <a href="#/team">Das Team</a>
           <a href="#/karriere">Karriere</a>
           <a data-link="discord" href="#" target="_blank" rel="noopener">Discord</a>
@@ -97,8 +99,11 @@
   <!-- Anmeldung: eigene Oberfläche -->
   <div class="auth" data-auth hidden></div>
 
-  <!-- Seitenwechsel: Blöcke bauen den Bildschirm zu -->
-  <div class="blocks" data-blocks aria-hidden="true" hidden><img class="blocks__logo" src="assets/img/logo-sm.webp" alt=""></div>
+  <!-- Seitenwechsel: Blöcke bauen den Bildschirm zu, in der Mitte der Name der Seite -->
+  <div class="blocks" data-blocks aria-hidden="true" hidden></div>
+
+  <!-- Fenster für Editor und Rückfragen -->
+  <div class="auth modal" data-modal hidden></div>
 
   <div class="toast" role="status" aria-live="polite" data-toast></div>
 
@@ -106,6 +111,7 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/auth.js"></script>
+  <script src="assets/js/api.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

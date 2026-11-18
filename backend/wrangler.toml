@@ -11,11 +11,15 @@ APP_URL = "https://loris6.github.io/Civicy/"
 # Weitere erlaubte Adressen, mit Komma getrennt (z. B. zum Testen)
 ALLOWED_ORIGINS = "http://localhost:8000/"
 # Rang für alle, die noch keinen haben (id aus assets/js/data.js)
-DEFAULT_RANK = "neuling"
+DEFAULT_RANK = "spieler"
+# Teamränge: dürfen Neuigkeiten schreiben, im Forum moderieren und in „Ankündigungen“ Themen erstellen
+STAFF_RANKS = "inhaber,admin,developer,moderator,supporter,builder"
+# Forum-Kategorien (ids wie in assets/js/data.js unter forum), „:staff“ = nur das Team erstellt Themen
+FORUM_CATEGORIES = "ankuendigungen:staff,allgemein,modi,hilfe,vorschlaege,bugs,offtopic"
 # Feste Teamränge: Minecraft-Name oder UUID → Rang-id. Ränge lassen sich auch über PUT /api/ranks/<uuid> setzen.
 STAFF = '{}'
 
-# Speicher (Spieler, Ränge, Sitzungen, Bewerbungen): ein Durable Object mit SQLite – im kostenlosen Tarif enthalten
+# Speicher (Spieler, Ränge, Sitzungen, Forum, Neuigkeiten, Codes, Bewerbungen): ein Durable Object mit SQLite – im kostenlosen Tarif enthalten
 [[durable_objects.bindings]]
 name = "CIVICY_STORE"
 class_name = "CivicyStore"
@@ -28,5 +32,6 @@ new_sqlite_classes = ["CivicyStore"]
 #   npx wrangler secret put MS_CLIENT_SECRET      (Geheimer Clientschlüssel aus dem Azure-Portal)
 #   npx wrangler secret put SESSION_SECRET        (beliebige lange Zufallszeichenkette, z. B. openssl rand -hex 32)
 #   npx wrangler secret put DISCORD_WEBHOOK_URL   (optional: Bewerbungen landen in diesem Discord-Kanal)
-#   npx wrangler secret put ADMIN_KEY             (optional: Schlüssel, um Ränge per API zu setzen, z. B. vom Server-Plugin)
+#   npx wrangler secret put SERVER_KEY            (Schlüssel für das Plugin auf dem Minecraft-Server: /weblogin und Ränge)
+#   npx wrangler secret put ADMIN_KEY             (optional: Schlüssel für Admin-Werkzeuge, z. B. Ränge per curl setzen)
 # Oder alles automatisch über GitHub Actions („Backend veröffentlichen“, siehe README.md).
