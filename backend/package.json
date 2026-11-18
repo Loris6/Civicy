@@ -1,0 +1,10 @@
+{
+  "name": "civicy-backend",
+  "private": true,
+  "description": "Civicy – Backend für die Anmeldung mit Microsoft/Minecraft, Ränge und Bewerbungen",
+  "type": "module",
+  "scripts": {
+    "dev": "npx wrangler@4 dev",
+    "deploy": "npx wrangler@4 deploy"
+  }
+}

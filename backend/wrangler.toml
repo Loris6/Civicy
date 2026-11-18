@@ -1,0 +1,32 @@
+# Civicy – Backend auf Cloudflare Workers (Anleitung: backend/README.md)
+name = "civicy-backend"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# „Anwendungs-ID (Client)“ aus dem Azure-Portal – dieselbe wie in assets/js/config.js (nicht geheim)
+MS_CLIENT_ID = ""
+# Adresse der Webseite (mit / am Ende). Muss genau so im Azure-Portal als Umleitungs-URI stehen.
+APP_URL = "https://loris6.github.io/Civicy/"
+# Weitere erlaubte Adressen, mit Komma getrennt (z. B. zum Testen)
+ALLOWED_ORIGINS = "http://localhost:8000/"
+# Rang für alle, die noch keinen haben (id aus assets/js/data.js)
+DEFAULT_RANK = "neuling"
+# Feste Teamränge: Minecraft-Name oder UUID → Rang-id. Ränge lassen sich auch über PUT /api/ranks/<uuid> setzen.
+STAFF = '{}'
+
+# Speicher (Spieler, Ränge, Sitzungen, Bewerbungen): ein Durable Object mit SQLite – im kostenlosen Tarif enthalten
+[[durable_objects.bindings]]
+name = "CIVICY_STORE"
+class_name = "CivicyStore"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["CivicyStore"]
+
+# Geheim, NICHT hier eintragen:
+#   npx wrangler secret put MS_CLIENT_SECRET      (Geheimer Clientschlüssel aus dem Azure-Portal)
+#   npx wrangler secret put SESSION_SECRET        (beliebige lange Zufallszeichenkette, z. B. openssl rand -hex 32)
+#   npx wrangler secret put DISCORD_WEBHOOK_URL   (optional: Bewerbungen landen in diesem Discord-Kanal)
+#   npx wrangler secret put ADMIN_KEY             (optional: Schlüssel, um Ränge per API zu setzen, z. B. vom Server-Plugin)
+# Oder alles automatisch über GitHub Actions („Backend veröffentlichen“, siehe README.md).

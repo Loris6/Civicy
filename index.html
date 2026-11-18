@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Civicy – Minecraft Server</title>
+  <meta name="description" content="Civicy ist ein deutscher Minecraft-Server für Java und Bedrock: Gründe Städte, gib ihnen eigene Gesetze, handle mit anderen Spielern und erlebe jede Woche Events.">
+  <meta name="theme-color" content="#060B16">
+  <meta property="og:title" content="Civicy – Minecraft Server">
+  <meta property="og:description" content="Bau deine Stadt. Schreib Geschichte. Der Städte-Server für Java und Bedrock.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icons/og-image.jpg">
+  <meta name="application-name" content="Civicy">
+  <meta name="apple-mobile-web-app-title" content="Civicy">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/rubik-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/silkscreen-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/img/logo-sm.webp" as="image">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Theme vor dem ersten Bild setzen, damit nichts aufblitzt (Standard: dunkel)
+    (function () { var t = 'dark'; try { t = localStorage.getItem('civicy-theme') || 'dark'; } catch (e) {}
+      if (t === 'system') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <!-- Leiste oben: links das Logo, rechts IP, Profil und Menü -->
+  <header class="nav" data-nav>
+    <div class="nav__bar">
+      <div class="nav__start">
+        <a class="nav__brand" href="#/" aria-label="Civicy – Startseite">
+          <img class="nav__logo" src="assets/img/logo-sm.webp" alt="Civicy" width="200" height="165">
+        </a>
+        <nav class="nav__links" aria-label="Hauptmenü" data-nav-links></nav>
+      </div>
+      <div class="nav__end">
+        <button class="nav__ip" type="button" data-copy-ip aria-label="Server-Adresse kopieren"></button>
+        <button class="nav__icon" type="button" data-nav-account aria-expanded="false" aria-controls="nav-panel" aria-label="Anmelden"></button>
+        <button class="nav__icon" type="button" data-nav-menu aria-expanded="false" aria-controls="nav-panel" aria-label="Menü öffnen">
+          <span class="nav__burger" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__panel" id="nav-panel" data-nav-panel hidden></div>
+  </header>
+
+  <main id="main" tabindex="-1" data-main>
+    <noscript><div class="wrap" style="padding:160px 0">Für diese Seite wird JavaScript benötigt.</div></noscript>
+  </main>
+
+  <!-- Fußzeile -->
+  <footer class="foot" data-tone="dark">
+    <div class="wrap">
+      <div class="foot__top">
+        <a class="foot__logo" href="#/" aria-label="Civicy – Startseite"><img src="assets/img/logo-sm.webp" alt="Civicy" width="200" height="165"></a>
+        <div class="foot__social" data-socials></div>
+      </div>
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <p>Der Minecraft-Server, auf dem Spieler Städte gründen, Gesetze machen und gemeinsam Geschichte schreiben.</p>
+          <div class="foot__ip" data-foot-ip></div>
+        </div>
+        <div class="foot__col">
+          <h3>Spielen</h3>
+          <a href="#/regeln">Regeln</a>
+          <a href="#/raenge">Ränge</a>
+          <a href="#/faq">Häufige Fragen</a>
+          <a href="#/konto">Mein Konto</a>
+        </div>
+        <div class="foot__col">
+          <h3>Community</h3>
+          <a href="#/news">Neuigkeiten</a>
+          <a href="#/team">Das Team</a>
+          <a href="#/karriere">Karriere</a>
+          <a data-link="discord" href="#" target="_blank" rel="noopener">Discord</a>
+        </div>
+        <div class="foot__col">
+          <h3>Rechtliches</h3>
+          <a href="impressum.html">Impressum</a>
+          <a href="privacy.html">Datenschutz</a>
+          <a href="terms.html">Nutzungsbedingungen</a>
+        </div>
+      </div>
+      <p class="foot__legal">© <span data-year>2026</span> Civicy · Kein offizielles Minecraft-Produkt. Nicht von Mojang oder Microsoft genehmigt oder mit ihnen verbunden. · Icons: <a href="https://phosphoricons.com" target="_blank" rel="noopener">Phosphor</a> und <a href="https://simpleicons.org" target="_blank" rel="noopener">Simple Icons</a></p>
+    </div>
+  </footer>
+
+  <!-- Anmeldung: eigene Oberfläche -->
+  <div class="auth" data-auth hidden></div>
+
+  <!-- Seitenwechsel: Blöcke bauen den Bildschirm zu -->
+  <div class="blocks" data-blocks aria-hidden="true" hidden><img class="blocks__logo" src="assets/img/logo-sm.webp" alt=""></div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

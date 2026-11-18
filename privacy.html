@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Datenschutz – Civicy</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#060B16">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () { var t = 'dark'; try { t = localStorage.getItem('civicy-theme') || 'dark'; } catch (e) {}
+      if (t === 'system') t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t); })();
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__bar">
+      <a class="nav__brand" href="./" aria-label="Civicy – Startseite"><img class="nav__logo" src="assets/img/logo-sm.webp" alt="Civicy" width="200" height="165"></a>
+      <div class="nav__end"><a class="btn btn--ghost btn--sm" href="./">Zur Startseite</a></div>
+    </div>
+  </header>
+  <main class="legal">
+    <div class="wrap wrap--narrow">
+      <p class="eyebrow">Rechtliches</p>
+      <h1>Datenschutzerklärung</h1>
+      <p class="muted">Stand: <span data-legal="updated"></span></p>
+      <h2>1. Verantwortlicher</h2>
+      <p><span data-legal="operator">Vor- und Nachname</span>, <span data-legal="address">Anschrift</span>, E-Mail: <a data-legal="email" href="#">E-Mail</a></p>
+
+      <h2>2. Aufruf der Webseite</h2>
+      <p>Die Webseite wird über GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA) ausgeliefert. Beim Aufruf verarbeitet GitHub technisch notwendige Daten wie IP-Adresse, Zeitpunkt und aufgerufene Datei, um die Seite auszuliefern und vor Missbrauch zu schützen (Art. 6 Abs. 1 lit. f DSGVO). Schriften und Symbole liegen auf unserem eigenen Webspace; es werden keine Google Fonts geladen. Wir setzen keine Analyse- oder Werbe-Cookies ein.</p>
+
+      <h2>3. Speicher im Browser</h2>
+      <p>Im Speicher deines Browsers (localStorage) legen wir nur ab, was für die Seite nötig ist: dein gewähltes Farbschema, deine Anmeldung (Sitzungs-Token, Minecraft-Name, UUID, Rang), die zuletzt eingegebene E-Mail-Adresse und eine Liste deiner Bewerbungen. Du kannst diese Daten jederzeit über „Abmelden“ oder die Einstellungen deines Browsers löschen (§ 25 Abs. 2 TDDDG).</p>
+
+      <h2>4. Anmeldung mit dem Microsoft-Konto</h2>
+      <p>Die Anmeldung ist freiwillig. Gibst du deine E-Mail-Adresse ein, leiten wir dich mit dieser Adresse als Vorschlag zu Microsoft weiter (Microsoft Ireland Operations Ltd., One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland). Dein Passwort gibst du ausschließlich bei Microsoft ein – wir erhalten es nie.</p>
+      <p>Nach deiner Zustimmung bei Microsoft erhält unser Backend einen einmaligen Code. Damit fragt es bei Microsoft, Xbox Live und den Minecraft-Diensten (Mojang AB, Schweden) dein Minecraft-Profil ab. Wir speichern davon nur: Minecraft-UUID, Minecraft-Name, die E-Mail-Adresse deines Microsoft-Kontos, den Zeitpunkt der ersten und letzten Anmeldung sowie deinen Rang auf Civicy. Zugangs-Tokens von Microsoft, Xbox und Minecraft speichern wir nicht. Rechtsgrundlage ist die Erfüllung der von dir gewünschten Funktion (Art. 6 Abs. 1 lit. b DSGVO).</p>
+      <p>Die Verbindung kannst du jederzeit in deinem Microsoft-Konto unter „Datenschutz“ → „Apps und Dienste“ trennen.</p>
+
+      <h2>5. Backend</h2>
+      <p>Unser Backend läuft bei <span data-legal="backendHost">Cloudflare, Inc.</span>. Dort werden die unter 4. und 6. genannten Daten gespeichert. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung; Übermittlungen in die USA erfolgen auf Grundlage des EU-US Data Privacy Framework bzw. von Standardvertragsklauseln.</p>
+
+      <h2>6. Bewerbungen</h2>
+      <p>Wenn du dich für das Team bewirbst, verarbeiten wir deine Angaben (Minecraft-Name und UUID, Discord-Name, Alter, Spielzeit, deine Antworten), um die Bewerbung zu prüfen (Art. 6 Abs. 1 lit. b DSGVO). Die Bewerbung wird an einen nicht öffentlichen Kanal unseres Discord-Servers übermittelt (Discord Inc., 444 De Haro Street, Suite 200, San Francisco, CA 94107, USA). Wir löschen Bewerbungen spätestens sechs Monate nach Abschluss des Verfahrens.</p>
+
+      <h2>7. Dienste Dritter auf der Seite</h2>
+      <ul>
+        <li><b>mc-heads.net</b> – zeigt Köpfe und Skins zu Minecraft-Namen bzw. UUIDs. Dein Browser lädt die Bilder direkt von dort; dabei wird deine IP-Adresse übertragen.</li>
+        <li><b>api.mcsrvstat.us</b> – liefert den Live-Status des Servers (Spieler online).</li>
+        <li><b>playerdb.co</b> – nur im Demo-Modus: schlägt einen Minecraft-Namen nach.</li>
+        <li><b>Discord</b> – nur wenn eine Einladung hinterlegt ist: Anzahl der Mitglieder.</li>
+      </ul>
+      <p>Rechtsgrundlage ist unser berechtigtes Interesse an einer ansprechenden und aktuellen Darstellung (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+      <h2>8. Deine Rechte</h2>
+      <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Schreib uns dafür an <a data-legal="email" href="#">E-Mail</a>. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>
+    </div>
+  </main>
+  <footer class="foot" data-tone="dark">
+    <div class="wrap">
+      <p class="foot__legal" style="border:0;padding:0">© <span data-year>2026</span> Civicy · <a href="impressum.html">Impressum</a> · <a href="privacy.html">Datenschutz</a> · <a href="terms.html">Nutzungsbedingungen</a> · Kein offizielles Minecraft-Produkt. Nicht von Mojang oder Microsoft genehmigt oder mit ihnen verbunden.</p>
+    </div>
+  </footer>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/legal.js"></script>
+</body>
+</html>
